@@ -21,7 +21,7 @@ export default function Webinar() {
       endDate: "31 june, 2025",
       description:
         "Are you eager to master Full Stack Development and kickstart your career in web development? Join our exclusive live webinar where industry experts will guide you through the essential skills needed to become a proficient Full Stack Developer!",
-      bgColor: "bg-blue-50",
+      bgColor: "bg-yellow-50",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export default function Webinar() {
       endDate: "2 Agust, 2025",
       description:
         "Are you ready to supercharge your IT career with DevOps? Join our live webinar where industry experts will walk you through the DevOps lifecycle, tools, and best practices to accelerate software development and deployment!",
-      bgColor: "bg-blue-50",
+      bgColor: "bg-yellow-50",
     },
   ];
 
@@ -103,24 +103,28 @@ export default function Webinar() {
             className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full "
           >
             {courses.map((course) => (
-              <motion.div
-                whileHover={{ scale: 1.01 }}
-                key={course.id}
-                className={`p-4 w-full rounded-lg shadow-md ${course.bgColor} border-2 border-gray-300`}
-              >
-                <div className="flex justify-between items-center">
-                  <h2 className="text-lg font-semibold">{course.title}</h2>
-                </div>
-                <div className="mt-3 bg-white p-6 rounded-lg border-2 border-gray-300">
-                  <p>{course.description}</p>
+              <motion.div whileHover={{ scale: 1.02 }} key={course.id}>
+                <Card
+                  title={
+                    <Title level={4} className="m-0 text-indigo-700">
+                      {course.title}
+                    </Title>
+                  }
+                  bordered={false}
+                  className="shadow-xl rounded-xl p-6 transition-all duration-300 hover:shadow-2xl bg-white bg-opacity-90 backdrop-blur-lg"
+                >
+                  <Text className="text-gray-700">{course.description}</Text>
                   <p className="text-sm text-gray-600 mt-2">
-                    <strong>Start Date:</strong> {course.startDate} |{" "}
-                    <strong>End Date:</strong> {course.endDate}
+                    <strong>Start Date:</strong> {course.startDate} |
+                    <strong> End Date:</strong> {course.endDate}
                   </p>
-                </div>
-                <button className="px-6 py-2 bg-blue-400 mt-5 rounded-lg border-2 border-gray-300 hover:bg-blue-600 text-white font-semibold">
-                  Join Now →
-                </button>
+                  <Button
+                    type="primary"
+                    className="mt-4 w-full bg-indigo-600 hover:bg-indigo-700"
+                  >
+                    Join Now →
+                  </Button>
+                </Card>
               </motion.div>
             ))}
           </motion.div>

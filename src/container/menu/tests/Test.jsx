@@ -116,7 +116,7 @@ export default function LearningDashboard() {
       {/* Weekly Learning Goal Section */}
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="mt-10 bg-white bg-opacity-80 shadow-lg rounded-xl p-6 transition-all duration-300 hover:shadow-xl"
+        className="mt-10 bg-white bg-opacity-80 shadow-lg rounded-xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col"
       >
         <Title level={4} className="text-indigo-700">
           Set your weekly learning goal

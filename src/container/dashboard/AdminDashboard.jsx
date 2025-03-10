@@ -15,6 +15,7 @@ import {
 import { MdOutlineDownload } from "react-icons/md";
 import { FaChalkboardTeacher, FaQuestionCircle } from "react-icons/fa";
 import indew from "../../assets/images/indew.jpeg";
+import RegisterCohort from "../menu/webinars/RegisterCohort";
 
 const { Title } = Typography;
 
@@ -92,6 +93,7 @@ const StudentDashboard = () => {
           </motion.div>
         ))}
       </div>
+      <RegisterCohort />
       <p className="w-full  text-center text-lg font-semibold p-6 items-center">
         <span className="text-xl font-bold">
           <img
